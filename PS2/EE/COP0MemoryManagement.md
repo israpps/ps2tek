@@ -21,7 +21,7 @@ kseg3 | `E0000000h`-`FFFFFFFFh` | Kernel, TLB-mapped                |
 <div class="flash mt-3 flash-warn">
   
 Accessing a privileged region without the necessary privileges raises an Address Error exception.
-For `kseg0` and `kseg1`, the physical address retrieved is simply (address & `1FFFFFFFh`).
+For <code>kseg0</code> and <code>kseg1</code>, the physical address retrieved is simply (address & <code>1FFFFFFFh</code>).
   
 </div>
 
