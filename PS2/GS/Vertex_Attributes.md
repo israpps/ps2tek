@@ -28,7 +28,7 @@ Drawing kicks can only occur on XYZF2! XYZF3 will clear the queue as needed but 
 ```
 
 
-See [GS Fog](./fog.md) for details on fog.
+See [GS Fog](./Fog.md) for details on fog.
 
 ## `05h/0Dh` XYZ2/XYZ3
 - 0-15   X
