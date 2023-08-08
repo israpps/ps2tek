@@ -94,7 +94,7 @@ When `Status.ERL` or `Status.EXL` is set, the EE operates in kernel mode regardl
 </div>
 
 
-### $13 - COP0.Cause
+### `$13` - COP0.Cause
 - 2-6   Exception code
   + 00h:Interrupt
   + 01h:TLB Modified
@@ -126,10 +126,10 @@ Cause is used to determine what caused an exception.
 
 The BD/BD2 bits are important as when they are set, EPC/ErrorEPC is set to the address of the branch instruction, not its delay slot. This allows the EE to re-execute the branch when it returns from an exception.
 
-### $14/$30 - COP0.EPC/COP0.ErrorEPC
+### `$14`/`$30` - COP0.EPC/COP0.ErrorEPC
 - 0-31  Address to return to after an exception
 EPC and ErrorEPC are used by level 1 and 2 exceptions respectively. When the ERET instruction is executed, it jumps to the address in EPC or ErrorEPC, depending on if Status.EXL or Status.ERL is set.
 
-### $23 - COP0.BadPAddr
+### `$23` - COP0.BadPAddr
 - 0-31  Physical address that caused an exception
 BadPAddr is written to when a bus error occurs and Status.BEM is not set.
