@@ -45,7 +45,7 @@ X and Y are in units of pixels and define the upper-left corner of their respect
 ```note
 During transfer, X and Y wrap around if they exceed 2048, e.g., by the following formula:
 
-<code>X = (TRXPOS.X + TRXREG.width) % 2048</code>
+`X = (TRXPOS.X + TRXREG.width) % 2048`
 
 ```
 
