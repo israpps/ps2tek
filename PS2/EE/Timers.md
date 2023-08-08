@@ -50,8 +50,8 @@ Only exists for T0 and T1.
 Vertical and horizontal timings are presented below.
 
 ## Vertical Timings
-- PAL:  312 scanlines per frame (VBOFF: 286 | VBON: 26)
-- NTSC: 262 scanlines per frame (VBOFF: 240 | VBON: 22)
+- PAL:  312 scanlines per frame (VBOFF: 286 / VBON: 26)
+- NTSC: 262 scanlines per frame (VBOFF: 240 / VBON: 22)
 
 ## Horizontal Timings
 - PAL:  9436 BUSCLK cycles per scanline
