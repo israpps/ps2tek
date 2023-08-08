@@ -83,10 +83,9 @@ The full exception handling works as follows.
 <div class="flash flash-full">
   
 All interrupts are disabled unless the following condition is true.
-  
-```
-Status.IE && Status.EIE && !Status.EXL && !Status.ERL
-```
+  <code>
+    Status.IE && Status.EIE && !Status.EXL && !Status.ERL
+  </code>
 
 When `Status.ERL` or `Status.EXL` is set, the EE operates in kernel mode regardless of `Status.KSU`.
   
