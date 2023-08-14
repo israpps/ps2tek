@@ -12,7 +12,7 @@ sort: 1
 - `1000B4xxh`: IPU_TO
 - `1000C0xxh`: SIF0 (from IOP)
 - `1000C4xxh`: SIF1 (to IOP)
-- `1000C8xxh`: SIF2 (bidirectional, used for PSX mode and debugging)
+- `1000C8xxh`: SIF2 (bidirectional, used for PS1 mode and debugging)
 - `1000D0xxh`: SPR_FROM
 - `1000D4xxh`: SPR_TO
 
