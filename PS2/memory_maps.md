@@ -37,7 +37,7 @@ sort: 1
   KSEG1: A0000000h-BFFFFFFFh Kernel segment 1
   
   Physical
-  00000000h  2 MB     Main RAM (same as on PSX)
+  00000000h  2 MB     Main RAM (same as on PS1)
   1D000000h           SIF registers
   1F800000h  64 KB    Various I/O registers
   1F900000h  1 KB     SPU2 registers
@@ -47,5 +47,5 @@ sort: 1
 ```
 ## Additional Memory
 - 4 MB   GS VRAM (used for framebuffer, textures, zbuffer, etc)
-- 2 MB   SPU2 work RAM - quadrupled from PSX's SPU
+- 2 MB   SPU2 work RAM - quadrupled from PS1's SPU
 - 8 MB   Memory card
