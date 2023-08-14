@@ -16,12 +16,12 @@ sort: 0
 - Graphics Synthesizer (GS) - Fixed-function GPU. Designed to draw polygons very, very fast.
   + PCRTC - Renders GS output to a television screen. Can be programmed to work on a variety of TVs, including NTSC and PAL.
   
-- Input/Output Processor (IOP) - Duplicate of the PSX's CPU. Used for slower input/output tasks and for PSX backwards compatibility.
-  + IOP DMA - Same channels as on the PSX, along with additional channels exclusive to PS2 mode.
-  + IOP Timers - Same timers as on the PSX, with three additional 32-bit counters.
+- Input/Output Processor (IOP) - Duplicate of the PS1's CPU. Used for slower input/output tasks and for PS1 backwards compatibility.
+  + IOP DMA - Same channels as on the PS1, along with additional channels exclusive to PS2 mode.
+  + IOP Timers - Same timers as on the PS1, with three additional 32-bit counters.
   + CDVD Drive - Reads disc media. Also responsible for MagicGate decryption.
   + SIO2 - Serial ports used to read controllers and memory cards.
-  + SPU2 - Sound processor. Similar to the PSX SPU with added features.
+  + SPU2 - Sound processor. Similar to the PS1 SPU with added features.
   + DEV9 - Expansion port. Used mainly for the PS2 HDD and Network Adapter.
   + USB
   + FireWire
