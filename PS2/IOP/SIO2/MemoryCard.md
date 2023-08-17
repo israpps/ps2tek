@@ -162,3 +162,7 @@ Reply| 1 XX byte + 2B + Terminator
 Length| 3 bytes
 
 Sent by SECRMAN. Unknown purpose.
+
+```tip
+For more information on the commands sent by SECRMAN. please refer to the [homebrew SECRMAN Special driver](https://github.com/ps2dev/ps2sdk/tree/master/iop/security/secrman) wich is based on reverse engineering of the SECRMAN Special driver found on the 2.14 DVDPlayer Update discs ([`PBPX_952.22`](http://redump.org/disc/48961/)http://redump.org/disc/48961/)
+```
