@@ -19,7 +19,7 @@ sort: 4
 - 32-63  Framebuffer mask
 
 Bits 32-63 prevent the specified bits in the framebuffer from being updated by the following formula:
-```  
+```c
 final_color = (final_color & ~mask) | (frame_color & mask)
 ```
 
