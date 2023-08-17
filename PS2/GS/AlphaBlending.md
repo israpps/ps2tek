@@ -12,7 +12,7 @@ sort: 8
 - 8-15  Alpha FIX
 
 The GS's alpha blending formula is fixed but it contains four variables that can be reconfigured:
-```
+```c
 Output = (((A - B) * C) >> 7) + D
 ```
 A, B, and D are colors and C is an alpha value. Their specific values come from the ALPHA register:
