@@ -6,6 +6,11 @@ sort: 6
 
 System server IDs have bit 31 set (e.g. 80000000h | . Known system IDs are listed here. Note that games can install custom servers with any possible ID, as long as bit 31 is not set, so those are excluded from the list.
 
+```note
+Arcade PS2s boards are based on a different SCE sdk version than the one used to build the builtin software of the retail PS2 bios.
+
+so keep it in mind, as some modules, like FILEIO, will have a diferent rpc server ID
+```
 
 System Server IDs
 ID | Service | Module | Notes
