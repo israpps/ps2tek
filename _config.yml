@@ -2,7 +2,7 @@ title: PS2Tek
 lang: en
 description: Write an awesome description for your new site here
 
-remote_theme: rundocs/jekyll-rtd-theme
+remote_theme: JV-conseil/jekyll-theme-read-the-docs
 
 readme_index:
   with_frontmatter: true
