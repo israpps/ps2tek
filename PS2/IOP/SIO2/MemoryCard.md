@@ -141,7 +141,32 @@ Reply| 1 XX byte + 2B + Variable + Terminator
 Length| 12 bytes
 
 This strange command is used by SECRMAN while detecting the card and does some XOR checksumming.
-(todo: better explanation)
+
+it's 1 byte parameter is actually a subcmd:
+
+Sub-CMD |  Purpose |
+------- | -------- | 
+`0x00` | _Unknown_. called after card auth key change
+`0x01` | Requests the card to send CardIV vector
+`0x02` | Requests the card to send CardMaterial vector
+`0x03` | _Unknown_. called after secrman sent CardIV & CardMaterial to the mechacon
+`0x04` | Requests the card to send CardNonce vector
+`0x05` | _Unknown_. called after secrman sent CardNonce to the mechacon
+`0x06` | sends the MechaChallenge3 data to the card
+`0x07` | sends the MechaChallenge2 data to the card
+`0x08` | _Unknown_
+`0x09` | _Unknown_
+`0x0A` | _Unknown_. This command usually fails on magicgate mismatch (eg: retail mechacon and arcade memory card)
+`0x0B` | sends the MechaChallenge1 data to the card
+`0x0C` | _Unknown_
+`0x0D` | _Unknown_
+`0x0E` | _Unknown_
+`0x0F` | Requests the card to send CardResponse1 data. (wich was generated with the MechaChallenge data)
+`0x10` | _Unknown_
+`0x11` | Requests the card to send CardResponse2 data
+`0x12` | _Unknown_
+`0x03` | Requests the card to send CardResponse3 data
+`0x14` | _Unknown_. it may signal the end of the secrAuthCard routine. after calling this command. secrauthcard obtains the final result of the mechacon authentication and returns the final value
 
 ### `F3h` - AuthF3
 
@@ -151,7 +176,10 @@ Command| F3 + 2 XX bytes
 Reply| 1 XX byte + 2B + Terminator
 Length| 3 bytes
 
-Sent by SECRMAN. Unknown purpose.
+Sent by SECRMAN. Instructs the card to reset cryptography.  
+This command is sent at the beginning of SecrAuthCard, also, the failure of certain functions inside secrAuthCard will also trigger an additional card before the function returns an error.
+
+Some SECRMAN modules with residual printf refer to this as "card auth 60"
 
 ### `F7h` - AuthF7
 
@@ -161,7 +189,8 @@ Command| F7 + 2 XX bytes
 Reply| 1 XX byte + 2B + Terminator
 Length| 3 bytes
 
-Sent by SECRMAN. Unknown purpose.
+Sent by retail SECRMAN only. named by the Scene as Card Auth Key Change.  
+Orders an official retail card to stop using developer magicgate and start using retail magicgate
 
 ```tip
 For more information on the commands sent by SECRMAN. please refer to the [homebrew SECRMAN Special driver](https://github.com/ps2dev/ps2sdk/tree/master/iop/security/secrman) wich is based on reverse engineering of the SECRMAN Special driver found on the 2.14 DVDPlayer Update discs ([`PBPX_952.22`](http://redump.org/disc/48961/))
