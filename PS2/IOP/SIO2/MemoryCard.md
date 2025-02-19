@@ -177,11 +177,11 @@ Reply| 1 XX byte + 2B + Terminator
 Length| 3 bytes
 
 Sent by SECRMAN. Instructs the card to reset cryptography.  
-This command is sent at the beginning of SecrAuthCard, also, the failure of certain functions inside secrAuthCard will also trigger an additional card before the function returns an error.
+This command is sent at the beginning of SecrAuthCard, also, the failure of certain functions inside secrAuthCard will also result on this command being sent again before the function returns an error.
 
 Some SECRMAN modules with residual printf refer to this as "card auth 60"
 
-### `F7h` - AuthF7
+### `F7h` - CardAuthKeyChange
 
  .  |  .  |
 --- | --- | 
