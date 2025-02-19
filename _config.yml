@@ -1,5 +1,6 @@
 title: PS2Tek
 lang: en
+markdown: GFM
 description: Write an awesome description for your new site here
 
 remote_theme: JV-conseil/jekyll-theme-read-the-docs
