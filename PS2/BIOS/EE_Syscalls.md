@@ -264,3 +264,30 @@ this COULD be related to the MachineType Field on the KELFs header
 
 ### `7Fh`: `int GetMemorySize()`
 Returns the amount of RDRAM on the console in bytes.
+
+### `0x80`: `void _GetGsDxDyOffset(int mode, int *dx, int *dy, int *dw, int *dh)`
+Internal function for getting board-specific offsets, only present in later kernels (ROMVER > `20010608`).
+
+### `0x82`: `int _InitTLB()`
+
+### `0x83`: `FindAddress`
+
+### `0x85`: `SetMemoryMode(int mode)`
+Sets the memory size.
+
+```warning
+This syscall only works on PSX DESR
+
+Namco system 256/148 and DTL-T models dont support this syscall although they also have more than 32MB of ram
+```
+- `mode == 1`: 32MB mode
+- `mode != 1`: 64MB mode
+
+The mode is only binding when either `_InitTLB()` or the PSX `ExecPS2()` syscall is called.
+Also, a TLB exception will trigger if the Stack Pointer resides beyond
+
+### `0x86`: `int GetMemoryMode()`
+Gets the value set by `0x85` syscall, only works on PSX DESR
+
+### `0x87`: `ExecPSX`
+Only works on PSX DESR
