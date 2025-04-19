@@ -192,6 +192,9 @@ Length| 3 bytes
 Sent by retail SECRMAN only. named by the Scene as Card Auth Key Change.  
 Orders an official retail card to stop using developer magicgate and start using retail magicgate
 
+```note
+retail and special secrman will send this command byte followed of a `0x1`. however. secrman for arcade sends a `0x3`. this need more investigation
+
 ```tip
 For more information on the commands sent by SECRMAN. please refer to the [homebrew SECRMAN Special driver](https://github.com/ps2dev/ps2sdk/tree/master/iop/security/secrman) wich is based on reverse engineering of the SECRMAN Special driver found on the 2.14 DVDPlayer Update discs ([`PBPX_952.22`](http://redump.org/disc/48961/))
 ```
