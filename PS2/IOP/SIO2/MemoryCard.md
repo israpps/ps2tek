@@ -189,8 +189,16 @@ Command| F7 + 2 XX bytes
 Reply| 1 XX byte + 2B + Terminator
 Length| 3 bytes
 
-Sent by retail SECRMAN only. named by the Scene as Card Auth Key Change.  
-Orders an official retail card to stop using developer magicgate and start using retail magicgate
+This command orders the card to select a mg keyset. the byte after F7 is the parameter for this, the parameter can be any of the following values, original cards will ignore the command if the parameter is not one of these
+
+Parameter | notes |
+--------- | ----- |
+`0`       | developer mg. not used by DEX SECRMAN because this is the key chosen when card starts on cold boot
+`1`       | retail mg. requested by all CEX SECRMAN
+`2`       | unknown. purpose unknown. console that uses this is also unknown.
+`3`       | Arcade. used by arcade PS2s for authenticating cards only on the slot 2 (mc1:). this is not the same magicgate than the one used by dongles plugged on arcade systems slot 1 (mc0:)
+
+
 
 ```tip
 For more information on the commands sent by SECRMAN. please refer to the [homebrew SECRMAN Special driver](https://github.com/ps2dev/ps2sdk/tree/master/iop/security/secrman) wich is based on reverse engineering of the SECRMAN Special driver found on the 2.14 DVDPlayer Update discs ([`PBPX_952.22`](http://redump.org/disc/48961/))
