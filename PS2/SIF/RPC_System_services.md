@@ -33,3 +33,13 @@ ID | Service | Module | Notes
 `80000904h` | MTAP Unknown | MTAPMAN | 
 `80000905h` | MTAP Unknown | MTAPMAN | 
 `80001400h` | EyeToy | EYETOY | not in BIOS
+
+
+NAMCO System246/456 Server IDs
+ID | Service | Module | Notes
+-- | ------- | ------ | -----
+`0x76500003` | JV SIF | ACJVSIF | 
+`0x76500001` | ACIOPM | ACMEME  | exposes the interfaces provided by acjv, acmem, acram, and acsram to the EE using SIF RPC.
+`0x76500002` | ACCDVDE | ACCDVDE | exposes the interfaces provided by accdvd
+`0x1000` | UNKNOWN |  | 
+`0xFFFF` | ARCTC | ACRTC | exposes the real-time clock provided by cdvdman
