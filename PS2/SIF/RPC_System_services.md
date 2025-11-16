@@ -41,5 +41,5 @@ ID | Service | Module | Notes
 `0x76500003` | JV SIF | ACJVSIF | 
 `0x76500001` | ACIOPM | ACMEME  | exposes the interfaces provided by acjv, acmem, acram, and acsram to the EE using SIF RPC.
 `0x76500002` | ACCDVDE | ACCDVDE | exposes the interfaces provided by accdvd
-`0x1000` | UNKNOWN |  | 
+`0x1000` | SSM | SSM | Bloody roar3 has this module with symbols. seems music related
 `0xFFFF` | ARCTC | ACRTC | exposes the real-time clock provided by cdvdman
