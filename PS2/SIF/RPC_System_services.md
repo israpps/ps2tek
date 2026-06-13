@@ -41,5 +41,6 @@ ID | Service | Module | Notes
 `0x76500003` | JV SIF | ACJVSIF | 
 `0x76500001` | ACIOPM | ACMEME  | exposes the interfaces provided by acjv, acmem, acram, and acsram to the EE using SIF RPC.
 `0x76500002` | ACCDVDE | ACCDVDE | exposes the interfaces provided by accdvd
+`0x76500004` | ACNSWE | ACNSWE | Found inside IOPRP image of NM00001. would seem this interacts with the ` STR force feedback motor board` used in the game mentioned
 `0x1000` | SSM | SSM | Bloody roar3 has this module with symbols. seems music related
 `0xFFFF` | ARCTC | ACRTC | exposes the real-time clock provided by cdvdman
